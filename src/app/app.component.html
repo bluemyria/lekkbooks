@@ -1,3 +1,11 @@
-<lb-book-list></lb-book-list>
+<lb-book-list
+  *ngIf="viewState==='list'"
+  (showDetailsEvent)="showDetails($event)">
+</lb-book-list>
+<lb-book-details
+  *ngIf="viewState==='details'"
+  (showListEvent)="showList()"
+  [book]="book">
+</lb-book-details>
 
 <router-outlet></router-outlet>
