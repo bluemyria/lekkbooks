@@ -2,6 +2,6 @@
   <lb-book-list-item class="item"
     *ngFor="let b of books"
     [book]="b"
-    (click)="showBookDetails(b)">
+    [routerLink]="b.isbn">
   </lb-book-list-item>
 </div>
