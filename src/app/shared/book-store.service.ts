@@ -13,7 +13,7 @@ import { BookFactory } from './book-factory';
 })
 export class BookStoreService {
 
-  private api = 'https://api3.angular-buch.com';
+  private api = 'https://api3.angular-buch.com/secure';
 
   constructor(private http: HttpClient) { }
 
