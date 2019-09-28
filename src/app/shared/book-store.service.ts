@@ -54,6 +54,16 @@ export class BookStoreService {
     );
   }
 
+  create(book: Book): Observable<any> {
+    return this.http.post(`
+      ${this.api}/book`,
+      book,
+      { responseType: 'text'}
+    ).pipe(
+      catchError(this.errorHandler)
+    );
+ }
+
   private errorHandler(error: HttpErrorResponse): Observable<any> {
     console.error('Fehler aufgetretten!');
     return throwError(error);
