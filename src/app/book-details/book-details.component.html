@@ -36,13 +36,14 @@
     <img *ngFor="let thumbnail of book.thumbnails" [src]="thumbnail.url" />
   </div>
 
-  <button class="four wide column" routerLink="../../books">
-    Zurück zur Buchliste
-  </button>
-
   <button class="ui tiny red labeled icon button"
     (click)="removeBook()" >
     <i class="remove icon"></i>Buch Löschen
+  </button>
+
+  <button class="ui tiny yellow labeled icon button"
+    [routerLink]="['../../admin/edit',book.isbn]">
+    <i class="write icon"></i> Buch bearbeiten
   </button>
 
 </div>

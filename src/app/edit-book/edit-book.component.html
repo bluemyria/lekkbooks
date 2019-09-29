@@ -1,0 +1,7 @@
+<h1>Buck bearbeiten</h1>
+<lb-book-form
+  *ngIf="book"
+  (submitBook)="updateBook($event)"
+  [book]="book"
+  [editing]="true">
+</lb-book-form>

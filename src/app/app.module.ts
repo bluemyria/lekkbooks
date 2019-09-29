@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DateValueAccessorModule } from 'angular-date-value-accessor';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { TokenInterceptor } from './shared/token-interceptor';
 import { BookFormComponent } from './book-form/book-form.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { FormMessagesComponent } from './form-messages/form-messages.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { FormMessagesComponent } from './form-messages/form-messages.component';
     SearchComponent,
     BookFormComponent,
     CreateBookComponent,
-    FormMessagesComponent
+    FormMessagesComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     DateValueAccessorModule
   ],
   providers: [
